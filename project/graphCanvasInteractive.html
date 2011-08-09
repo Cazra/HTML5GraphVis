@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>Canvas Graph Prototype</title>
+<script src="http://code.jquery.com/jquery-1.6.1.js"></script>
+<script src="magicPen.js"></script>
+<script src="dataPage.js"></script>
+<script src="../nodeobject.js"></script>
+<script src="../graphobject.js"></script>
+<script src="../cameraobject.js"></script>
+<script src="../keyboardobject.js"></script>
+<script src="../stopwatchobject.js"></script>
+<script src="graphCanvasInteractive.js"></script>
+<script src="interactiveMacro.js"></script>
+<style type="text/css">
+	canvas
+	{
+		position: absolute;
+		border: 1px solid black;
+		left: 10px;
+		top: 10px;
+	}
+</style>
+</head>
+<body bgcolor="gray">
+<canvas id="bgCanvas" width="640" height="480">Your browser does not support Canvas. You should upgrade.</canvas>
+<canvas id="edgeGroup" width="640" height="480">Your browser does not support Canvas. You should upgrade.</canvas>
+<canvas id="nodeGroup" width="640" height="480">Your browser does not support Canvas. You should upgrade.</canvas>
+<canvas id="canvasHidden" width="640" height="480" hidden="true"></canvas>
+<noscript>Turn your javascript back on!</noscript>
+</body>
+</html>
