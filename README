@@ -28,6 +28,7 @@ Running the graph applications:
 * Enter the connectivity level for your graph.
 * If you request a graph with between 500 and 1,000 nodes, it may take a while for the server to compute the layout. Please wait.
 * When the graph is done loading, it will appear in the html file's Canvas/SVG/Protovis viewport.
+
 Note: The Canvas applications in this directory are optimized for drawing in Firefox. 
 	See the comments in the graphDrawCanvas and drawEdgesCanvas in graphobject.js to optimize them for Chrome instead.
 
@@ -58,6 +59,7 @@ Running the Data collecting graph applications:
 	together, so they will not work if ran directly from your file system.
 * The data collected from these applications is presented in pop-up windows. Make sure that pop-up windows are not blocked by your 
 	browser while you are running the data collection applications. 
+
 Note: The Canvas applications in this directory are optimized for drawing in Chrome. 
 	See the comments in the graphDrawCanvas and drawEdgesCanvas in commonObjects.js to optimize them for Firefox instead.
 
