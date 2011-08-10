@@ -1,9 +1,12 @@
 README
+========
+
 Created by Stephen Lindberg 8/10/2011
 Last modified 8/10/2011
 
 
 Requirements:
+----------------
 -have node.js installed
 -have an HTML5-enabled web browser
 -make sure that javascript is turned on for that browser. For data collection, make sure that pop-ups are not blocked.
@@ -11,12 +14,14 @@ Requirements:
 
 
 Running the layout server:
+--------------------------------
 -go to the ./GraphServerGith directory.
 -Enter into your command line: node graphserver.js
 -The server is now running on localhost!
 
 
 Running the graph applications:
+-------------------------------------
 -make sure that the layout server is running on your machine (see above).
 -Open any of the html files in the ./project directory. 
 -Enter the number of nodes for your graph.
@@ -28,6 +33,7 @@ Note: The Canvas applications in this directory are optimized for drawing in Fir
 
 
 Controls for interactive graph applications: 
+------------------------------------------------
 -Drag the background with the mouse to pan the camera.
 -Use the mouse's scroll wheel to zoom in and out of an area in the visualization.
 -You can also use - and = on the keyboard to zoom in and out of the center of the screen.
@@ -38,6 +44,7 @@ Controls for interactive graph applications:
 
 
 Running the Data collecting graph applications: 
+----------------------------------------------------
 -make sure that the layout server is running on your machine (see above).
 -The data collection files are in the ./Data_Collection directory. The code and html files are located in ./Data_Collection/project.
 	These are the automated versions of our graph applications used to collect time data during our experiments. 
