@@ -1,0 +1,55 @@
+README
+Created by Stephen Lindberg 8/10/2011
+Last modified 8/10/2011
+
+
+Requirements:
+-have node.js installed
+-have an HTML5-enabled web browser
+-make sure that javascript is turned on for that browser. For data collection, make sure that pop-ups are not blocked.
+-If you are running the SVG graph applications in Chromium, be sure to run them on your localhost using a local server such as Apache.
+
+
+Running the layout server:
+-go to the ./GraphServer directory.
+-Enter into your command line: node graphserver.js
+-The server is now running on localhost!
+
+
+Running the graph applications:
+-make sure that the layout server is running on your machine (see above).
+-Open any of the html files in the ./project directory. 
+-Enter the number of nodes for your graph.
+-Enter the connectivity level for your graph.
+-If you request a graph with between 500 and 1,000 nodes, it may take a while for the server to compute the layout. Please wait.
+-When the graph is done loading, it will appear in the html file's Canvas/SVG/Protovis viewport.
+Note: The Canvas applications in this directory are optimized for drawing in Firefox. 
+	See the comments in the graphDrawCanvas and drawEdgesCanvas in graphobject.js to optimize them for Chrome instead.
+
+
+Controls for interactive graph applications: 
+-Drag the background with the mouse to pan the camera.
+-Use the mouse's scroll wheel to zoom in and out of an area in the visualization.
+-You can also use - and = on the keyboard to zoom in and out of the center of the screen.
+-Click and drag nodes to move them around.
+-Hover your mouse over a node to view its tooltip label.
+-Click a node to toggle the highlight property of it and its neighbors. See if you can highlight all the nodes in your graph!
+-Press R on the keyboard to reset the camera and unhighlight all nodes.
+
+
+Running the Data collecting graph applications: 
+-make sure that the layout server is running on your machine (see above).
+-The data collection files are in the ./Data_Collection directory. The code and html files are located in ./Data_Collection/project.
+	These are the automated versions of our graph applications used to collect time data during our experiments. 
+	They are all google-closure-compiled to optimize speed. If you make any changes to the code in this folder, you can recompile it 
+	using the makefile in ./Data_Collection.
+-The automated applications are designed to run tests for several graphs chained one after the other. The graph tests are specified by the 
+	JSON code in the dataSets.js file. You can change these values without having to recompile the applications. 
+	You must specify 3 values for connectivity levels.
+-To run the data collection applications, put the ./Data_Collection/project directory on your localhost server and access the 
+	html files from localhost. The applications use session data to chain experiments together, so they will not work if ran directly 
+	from your file system.
+-The data collected from these applications is presented in pop-up windows. Make sure that pop-up windows are not blocked by your 
+	browser while you are running the data collection applications. 
+Note: The Canvas applications in this directory are optimized for drawing in Chrome. 
+	See the comments in the graphDrawCanvas and drawEdgesCanvas in commonObjects.js to optimize them for Firefox instead.
