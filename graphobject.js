@@ -440,14 +440,14 @@ function graphDrawCanvas(camera)
 	
 	edgePen.strokeStyle = "#000000";
 	edgePen.miterLimit = 4; // equal to SVG's initial miter limit value
-	edgePen.beginPath();
+	edgePen.beginPath(); // uncomment this line for Firefox optimization. Comment it out for Chrome optimization.
 	this.numDrawnEdges = 1;
 	for(i in this.nodes) 
 	{
 		var myNode = this.nodes[i];
 		this.drawEdges(myNode);
 	}
-	edgePen.stroke();
+	edgePen.stroke(); // uncomment this line for Firefox optimization. Comment it out for Chrome optimization.
 
 	
 	// reset the drawnEdges array for the next time the draw method is called.
@@ -558,15 +558,18 @@ function graphDrawCanvas(camera)
 			{
 			//	mpLine(edgePen, node.x, node.y, other.x, other.y, "#000000");
 				
+			//	edgePen.beginPath(); // comment this line out for Firefox optimization. Uncomment it for Chrome optimization
 				edgePen.moveTo(node.x, node.y);
 				edgePen.lineTo(other.x, other.y);
+			//	edgePen.stroke(); // comment this line out for Firefox optimization. Uncomment it for Chrome optimization
 				
-				if(this.numDrawnEdges % 40 == 0)
+				if(this.numDrawnEdges % 40 == 0) //uncomment this block for Firefox optimization. Comment it out for Chrome optimization
 				{
 					edgePen.stroke();
 					edgePen.beginPath();
 				}
-				this.numDrawnEdges++;
+				this.numDrawnEdges++; //uncomment this block for Firefox optimization. Comment it out for Chrome optimization
+				
 				// set drawn edge flags to true so they don't get drawn twice.
 				
 				this.drawnEdges[i + "," + node.id] = true;

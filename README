@@ -11,7 +11,7 @@ Requirements:
 
 
 Running the layout server:
--go to the ./GraphServer directory.
+-go to the ./GraphServerGith directory.
 -Enter into your command line: node graphserver.js
 -The server is now running on localhost!
 
@@ -46,10 +46,11 @@ Running the Data collecting graph applications:
 -The automated applications are designed to run tests for several graphs chained one after the other. The graph tests are specified by the 
 	JSON code in the dataSets.js file. You can change these values without having to recompile the applications. 
 	You must specify 3 values for connectivity levels.
--To run the data collection applications, put the ./Data_Collection/project directory on your localhost server and access the 
-	html files from localhost. The applications use session data to chain experiments together, so they will not work if ran directly 
-	from your file system.
+-To run the data collection applications, put the ./Data_Collection/project directory on your localhost server and access the starting 
+	html file (the one you specified first in dataSets.js) from localhost. The applications use session data to chain experiments 
+	together, so they will not work if ran directly from your file system.
 -The data collected from these applications is presented in pop-up windows. Make sure that pop-up windows are not blocked by your 
 	browser while you are running the data collection applications. 
 Note: The Canvas applications in this directory are optimized for drawing in Chrome. 
 	See the comments in the graphDrawCanvas and drawEdgesCanvas in commonObjects.js to optimize them for Firefox instead.
+
